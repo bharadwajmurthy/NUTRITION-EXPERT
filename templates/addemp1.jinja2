@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html lang=en>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Add Bmi</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="{{url_for('static',filename='style/main.css')}}" rel="stylesheet" type="text/css" media="screen" />
+  <link href="{{url_for('static',filename='style/animate.css')}}" rel="stylesheet" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  </head>
+  <body background="{{url_for('static',filename='addemp.jpg')}}">
+
+      {% if error is defined %}
+          <div>
+              <h1>{{ error }}</h1>
+          </div>
+          {% else %}
+
+        <div>
+          <div>
+            <h1 class="black-text">Enter the Item details</h1>
+          <form action ="/nutrition/add/" method="post">
+              <div class ="col-3 container white-text">
+                FOOD ID <input type = "text" name ="c_id"  /><br>
+                Name <input type = "text" name ="c_date"  /><br>
+                Cholestrol <input type = "text" name ="c_weight" /><br>
+                Sugar <input type = "text" name ="c_age" /><br>
+                Fat <input type = "text" name ="c_bmi" /><br>
+                Vitamins <input type = "text" name ="c_height" /><br>
+              </div>
+              <div class ="col-4">
+                  <input type ="submit" value ="Enter" class="btn btn-large waves-effect waves-light black"/>
+              </div>
+            </form>
+            </div>
+
+        <div>{{ msg }}</div>
+
+      {% endif %}
+      <a href="/nutrition/" class="black-text btn btn-medium waves-effect waves-light">Back</a>
+    </body>
+</html>

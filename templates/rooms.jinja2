@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Weight Monitor</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <!--<link href="{{url_for('static',filename='style/main.css')}}" rel="stylesheet" type="text/css" media="screen" />-->
+  <link href="{{url_for('static',filename='style/animate.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <style>
+    .carousel {
+      height: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section1">
+    <div class="carousel carousel-slider" data-indicators="true">
+      <a href="#one" class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1533025782032-634283c7c7ad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3680a4fce212f1b6d97a171a8ea7527b&auto=format&fit=crop&w=500&q=60" alt="image">
+      </a>
+      <a href="#two" class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1519781542704-957ff19eff00?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c351475860e8248dcd543ebbba1aa24f&auto=format&fit=crop&w=500&q=60" alt="image">
+      </a>
+      <a href="#three" class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=67fb2e7b1fbe39b18b51146234ef38aa&auto=format&fit=crop&w=500&q=60" alt="">
+      </a>
+      <a href="#four" class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1522844990619-4951c40f7eda?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1aa1b4236ec33c8f989df8afa8b8ba09&auto=format&fit=crop&w=750&q=80"
+          alt="">
+      </a>
+      <a href="#five" class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38529cebf7147845d13a6aa60248b5df&auto=format&fit=crop&w=750&q=80"
+          alt="">
+      </a>
+
+    </div>
+
+  </section>
+  <section class="section1 deep-purple lighten-3  center section-icons black-text">
+    <div class="row">
+      <h1>Weight Management</h1>
+      <div class="col s12 m6">
+
+        <div class="card-panel grey darken-3">
+          <i class="material-icons large teal-text">add_circle</i>
+          <p class="white-text">Add Weights</p>
+          <a href="/weights/add/" class="btn btn-medium waves-effect waves-light">
+            <button class="btn btn-medium waves-effect waves-light">Add</button>
+          </a>
+        </div>
+
+      </div>
+      <div class="col s12 m6">
+        <div class="card-panel grey darken-3">
+          <i class="material-icons large teal-text">map</i>
+          <p class="white-text">History</p>
+          <a href="/weights/list/" class="btn btn-medium waves-effect waves-light">
+            <button class="btn btn-medium waves-effect waves-light">Manage</button>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
+  <script>
+    $(document).ready(function () {
+      $('.carousel-slider').carousel({
+        indicators:true
+      });
+
+    $(document).ready(function () {
+
+        setInterval(function(){
+            $('.carousel').carousel('next')
+        } ,3000)
+    });
+
+
+    });
+  </script>
+
+</body>
+
+</html>
